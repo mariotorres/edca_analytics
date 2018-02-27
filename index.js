@@ -47,7 +47,7 @@ MongoClient.connect(url, function(err, client) {
             }
         }
 
-        if (obj.releases.length > 1) {
+        //if (obj.releases.length > 1) {
             countValues(obj.compiledRelease);
             let s = {
                 ocid: obj.ocid,
@@ -56,7 +56,7 @@ MongoClient.connect(url, function(err, client) {
             };
             //console.log(s);
             summaryCollection.insertOne(s);
-        }
+        //}
 
     }, function (error) {
         if (error !== null){
